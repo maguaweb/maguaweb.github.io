@@ -386,12 +386,12 @@
   <swiper v-cloak ref="mySwiper" :options="swiperOptions" @slideChangeTransitionEnd="slideChangeTransitionEnd">
     
       <swiper-slide>
-        <div class="item swiper-lazy" data-background="/medias/5.jpg" style="background-size: 200000px; 
+        <div class="item swiper-lazy" data-background="/medias/13.jpg" style="background-size: 200000px; 
           background-position: left center;" style="position: relative;">
           <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
             <div class="flag">
               
-              <div class="img-mask swiper-lazy swiper-default-bgImg" data-background="/medias/5.jpg" style="height: 100%; background-size: cover; 
+              <div class="img-mask swiper-lazy swiper-default-bgImg" data-background="/medias/13.jpg" style="height: 100%; background-size: cover; 
                 background-position: center center;">
                 <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
               </div>
@@ -1541,17 +1541,6 @@
       
         
           
-            <!-- 不蒜子统计 -->
-            <!-- 不蒜子统计 -->
-<span id="busuanzi_container_site_pv">
-      <i class="fas fa-eye" aria-hidden="true"></i>Total visits：<span id="busuanzi_value_site_pv"></span> times
-</span>
-<span class="post-meta-divider">|</span>
-<span id="busuanzi_container_site_uv" style='display:none'>
-      <i class="fas fa-users" aria-hidden="true"></i>Number of visitors：<span id="busuanzi_value_site_uv"></span> people
-</span>
-
-          
         
       
         
@@ -1650,8 +1639,6 @@
 
     
     <!-- 背景彩带 -->
-    
-      <script type="text/javascript" size="100" alpha='0.4' zIndex="-1" src="/js/ribbon.min.js"></script>
     
 
     <script src="/js/utils/index.js"></script>
@@ -1954,6 +1941,31 @@
 
 
 <!-- 卡片滚动动画 -->
+
+    <script type="text/javascript">
+  loadScript("https://unpkg.com/scrollreveal@4.0.6/dist/scrollreveal.min.js")
+  function pjax_scrollrebeal() {
+    ScrollReveal().reveal('.reveal', {
+      distance: '120px',
+      duration: '400',
+      interval: '30',
+      scale: '1',
+      origin: 'bottom', // 动画开始的方向
+      easing: 'ease'
+    });
+  }
+  $(function () {
+    var checkScrollReveal = setInterval(function () {
+      if ($("#safearea").css("display") != "block") return
+      if (typeof ScrollReveal == "undefined") return
+      clearInterval(checkScrollReveal)
+      pjax_scrollrebeal();
+    }, 100)
+  });
+  document.addEventListener('pjax:complete', function () {
+    pjax_scrollrebeal();
+  })
+</script>
    
 
 <!-- 评论所需js -->
@@ -2035,8 +2047,6 @@
 
 
 
-
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" data-pjax></script>
 
 
     <!-- pjax -->
