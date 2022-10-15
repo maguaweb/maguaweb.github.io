@@ -481,8 +481,6 @@
       <div class="toc-aside-title">
         <i class="fas fa-list-ul" aria-hidden="true"></i><span>catalog</span>
         
-          <div class="toc-open-close">catalog</div>
-        
       </div>
       <div class="toc-content">
         <div class="toc"></div>
@@ -511,7 +509,7 @@
   }
   function openBtnClickFn () {
     let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
-    let open = eval('' || 'true');
+    let open = eval('' || 'false');
     openOrCloseBtn.click(function() {
       if (open) {
         closeToc();
@@ -527,7 +525,7 @@
 
   function initCloseTocWidth(init) {
     if (window.innerWidth >= 992) {
-      let isClose = false;
+      let isClose = true;
       isClose && closeToc(init)
     }
   }
@@ -960,20 +958,6 @@
     <!-- Baidu Analytics -->
 
     <!-- Baidu Push -->
-
-<script>
-    (function () {
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-        } else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-</script>
 
     
     <!-- 背景彩带 -->
