@@ -179,9 +179,6 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   background-size: cover;
   transition: all 0.3s;
 }
-.reveal {
-  visibility: hidden;
-}
 #l_main {
   width: 70%;
   margin: 0 auto;
@@ -1172,9 +1169,8 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   justify-content: space-between;
 }
 .main-content {
-  width: 65%;
-  margin-right: 10px;
-  margin-left: calc(35% - 355px);
+  width: 75%;
+  margin: 0 auto;
   margin-top: 10px;
   transition: width 0.3s;
 }
@@ -2750,7 +2746,6 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   width: 100%;
   height: 50vh;
   height: 60vh;
-  height: 100vh;
   overflow: hidden;
   background-size: cover;
   background-position: center center;
