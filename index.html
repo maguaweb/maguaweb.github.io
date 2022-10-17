@@ -192,7 +192,7 @@
       <main class="main" id="pjax-container">
         <!-- 头部导航 -->
         
-<header class="header   header-bg-color" 
+<header class="header   " 
   id="navHeader"
   style="position: fixed;
   left: 0; top: 0; z-index: 10;width: 100%;"
@@ -551,13 +551,13 @@
           <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
             <div class="flag">
               
-              <div class="img-mask swiper-lazy swiper-default-bgImg" data-background="/medias/36.jpg" style="height: 100%; background-size: cover; 
+              <div class="img-mask swiper-lazy swiper-default-bgImg" data-background="/medias/27.jpg" style="height: 100%; background-size: cover; 
                 background-position: center center;">
                 <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
               </div>
               <div class="flag-text">
                 <div class="flag-text-content">
-                  <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.1s" swiper-animate-delay="0.05s">萧炎</div>
+                  <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.1s" swiper-animate-delay="0.05s"></div>
                   
                       <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.1s" swiper-animate-delay="0.05s"></div>
                     
@@ -802,6 +802,13 @@
 }
 /* 当头部导航设置为背景透明的时候 */
 
+  .swiper-slide {
+    height: 400px;
+  }
+  .flag-text {
+    top: 80px;
+  }
+
 
 @media (min-width: 992px) {
   .swiper-button-prev {
@@ -915,6 +922,18 @@
 }
 /* 当头部导航设置为背景透明的时候 */
 
+  @media (max-width: 992px) {
+    .flag-text {
+      top: 60px;
+      height: 80%;
+    }
+  }
+  @media (max-width: 551px) {
+    .swiper-slide {
+      height: 310px;
+    }
+  }
+
 
 /* 文字或者按钮居中显示 */
 
@@ -972,6 +991,8 @@
   }
   .swiper-slide {
     height: calc(100vh - 60px);
+    
+      height: 100vh;
     
   }
   .flag-text {
@@ -2112,7 +2133,7 @@
 <!-- 设置导航背景 -->
 <script>
   let setHeaderClass = () => {
-    const headerMenuTransparent = false;
+    const headerMenuTransparent = true;
     if (!headerMenuTransparent) { return; }
     const nav = $('#navHeader');
     const navTop = nav.outerHeight();
