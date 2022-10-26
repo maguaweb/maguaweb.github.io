@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>萧炎blog</title>
+  <title>关于正则表达式 | 萧炎blog</title>
 
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -540,21 +540,21 @@
 
 
 <div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
-  background-position: center center;position: relative;background-image:url('/medias/1.jpg')">
+  background-position: center center;position: relative;background-image:url('/medias/33.jpg')">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
   <div class="post-detail-header_info-box">
     <div class="title-box">
       <span class="title">
-        
+        关于正则表达式
       </span>
     </div>
     
     
       
         <span class="post-detail-header_date">
-          <i class="fas fa-calendar"></i> Published in：2022-10-19 |
+          <i class="fas fa-calendar"></i> Published in：2022-09-17 |
         </span>
       
 
@@ -578,7 +578,7 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        <h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><p>2022-09-22 | <a target="_blank" rel="noopener" href="https://www.myxae86.top/categories/python/">python</a></p>
+        <h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><p>2022-09-17 | <a target="_blank" rel="noopener" href="https://www.myxae86.top/categories/python/">python</a></p>
 <p>正则表达式学习笔记</p>
 <p><a target="_blank" rel="noopener" href="https://tool.oschina.net/regex/">在线正则表达式测试 (oschina.net)</a></p>
 <h3 id="常用匹配规则"><a href="#常用匹配规则" class="headerlink" title="常用匹配规则"></a>常用匹配规则</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">\w          匹配字母、数字及下划线</span><br><span class="line">\W          匹配不是字母、数字及下划线的字符</span><br><span class="line">\s          匹配任意空白字符，等价于[\t\n\r\f]</span><br><span class="line">\S          匹配任意非空字符</span><br><span class="line">\d          匹配任意数字，等价于[0-9]</span><br><span class="line">\D          匹配任意非数字的字符</span><br><span class="line">\A          匹配字符串开头</span><br><span class="line">\Z          匹配字符串结尾，如果存在换行，只匹配到换行前的结束字符串</span><br><span class="line">\z          匹配字符串结尾，如果存在换行，同时还会匹配换行符</span><br><span class="line">\G          匹配最后匹配完成的位置</span><br><span class="line">\n          匹配一一个换行符</span><br><span class="line">\t          匹配一个制表符</span><br><span class="line">^           匹配一行字符串的开头</span><br><span class="line">$           匹配一行字符串的结尾</span><br><span class="line">.           匹配任意字符，除了换行符，当re.DOTALL标记被指定时，则可以匹配包括换行符的任意字符</span><br><span class="line">[...]       用来表示一组字符， 单独列出，比如[amk]匹配a、 m或k</span><br><span class="line">[^...]       不在[]中的字符，比如[^abc]匹配除了a、b、c之外的字符</span><br><span class="line">*           匹配0个或多个表达式</span><br><span class="line">+           匹配1个或多个表达式</span><br><span class="line">?           匹配0个或1个前面的正则表达式定义的片段，非贪婪方式</span><br><span class="line">&#123;n&#125;         精确匹配n个前面的表达式</span><br><span class="line">&#123;n, m&#125;      匹配n到m次由前面正则表达式定义的片段，贪婪方式</span><br><span class="line">a|b         匹配a或b</span><br><span class="line">()          匹配括号内的表达式，也表示一个组</span><br></pre></td></tr></table></figure>
@@ -605,8 +605,17 @@
 <h3 id="sub"><a href="#sub" class="headerlink" title="sub"></a>sub</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#sub()</span><br><span class="line">import re</span><br><span class="line">content = &quot;5645sfgsa6ga1gdGSg5&quot;</span><br><span class="line">content = re.sub(&#x27;\w+&#x27;,&#x27;&#x27;,content)  #用作替换字符</span><br><span class="line">print(content)</span><br></pre></td></tr></table></figure>
 
 <h3 id="compile"><a href="#compile" class="headerlink" title="compile"></a>compile</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#compile()</span><br><span class="line">import re</span><br><span class="line">from unittest import result</span><br><span class="line">content1 = &#x27;2016-12-15 12:00&#x27;</span><br><span class="line">content2 = &#x27;2016-12-17 12:55&#x27;</span><br><span class="line">content3 = &#x27;2016-12-22 13.23&#x27;</span><br><span class="line">pattern = re.compile(&#x27;\d&#123;2&#125;:\d&#123;2&#125;&#x27;)  #使用compile把正则表定义成一个对象。方便替换</span><br><span class="line">result1 = re.sub(pattern,&#x27;&#x27;,content1)</span><br><span class="line">result2 = re.sub(pattern,&#x27;&#x27;,content2)</span><br><span class="line">result3 = re.sub(pattern,&#x27;&#x27;,content3)</span><br></pre></td></tr></table></figure>
+
       </div>
       <div class="post-tags-categories">
+        
+        <div class="tags">
+          
+            <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE/" class="">
+              正则表达
+            </a>
+          
+        </div>
         
       </div>
       
@@ -618,26 +627,42 @@
 
 
 
+  
+  <div class="post-nav-prev post-nav-item">
+    <div class="post-nav-img" style="background-size: cover; 
+      background-position: center center;">
+      <img class="lazyload lazyload placeholder" src="/medias/30.jpg" class="lazyload placeholder" data-srcset="/medias/30.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+    </div>
+    <a href="/2022/10/01/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" class="post-nav-link">
+      <div class="title">
+        <i class="fas fa-angle-left"></i> Prev:
+        <div class="title-text">文件上传</div>
+      </div>
+      
+      <!-- <div class="content">
+        任意上传边缘资产的版本一般都很低，所有普遍存在任意上传
+目标资产很安全没有子域名、没有边缘资产时，可以从旁站入手
+进入网
+      </div> -->
+    </a>
+  </div>
+
 
 
   
   <div class="post-nav-next post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="/medias/21.jpg" class="lazyload placeholder" data-srcset="/medias/21.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
+      <img class="lazyload lazyload placeholder" src="/medias/33.jpg" class="lazyload placeholder" data-srcset="/medias/33.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
     </div>
-    <a href="/2022/10/11/php_XDEBUG%E9%85%8D%E7%BD%AE/" class="post-nav-link">
+    <a href="/2022/09/17/%E9%97%B2%E8%81%8Ashell/" class="post-nav-link">
       <div class="title">
         Next: <i class="fas fa-angle-right"></i>
-        <div class="title-text">关于PHPSTORM的DEBUG配置</div>
+        <div class="title-text">闲聊shell</div>
       </div>
       <!-- <div class="content">
-        是时候写一个文档了！
-如果有什么遗漏的地方欢迎随时向我提出！
-12PHP配置先检查phpStudy的PHP版本
-
-
-1然
+        shell2022-09-17 | 网络安全
+12345nc监听 nc -lvp 9527nc 监听机IP 监听机POR
       </div> -->
     </a>
   </div>
